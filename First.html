@@ -2,25 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>P-Page</title>
+    <title>TodoList</title>
 </head>
 <div id="myDIV" class="header">
-    <h2>Cписок дел</h2>
-    <input type="text" id="myInput" placeholder="Название ">
-    <button type="submit">Добавить</button>
-    <button2 onclick="window.location.href = 'https://www.youtube.com/';">Youtube</button2>
+    <h2 id="blink">To-do List</h2>
+    <input type="text"  id="myInput"  placeholder="Search" class="search">
+    <span onclick="SaveUnit()" class="SaveButton">Save</span>
 
 </div>
-
 <ul id="myUL">
     <li>Попасть в спортзал</li>
-    <li class="checked">Работа</li>
+    <li>Работа</li>
     <li>Спортзал</li>
     <li>Колледж</li>
     <li>Список покупок</li>
 </ul>
-<input type="checkbox" id="word_opts" name="test"> *случайное*</input>
-
 <link rel="stylesheet" type="text/css" href="cssFile.css">
+<style>
+    body {
+        background-color: #000000
+
+</style>
+<style>
+
+    @-webkit-keyframes pulsate {
+        50% { color: #4aff00; text-shadow: 0 -1px rgba(54, 51, 51, 0.3), 0 0 5px #000000, 0 0 8px #45ff00; }
+    }
+    @keyframes pulsate {
+        50% { color: #07ff00; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #000000, 0 0 8px #0dff00; }
+    }
+    #blink {
+        color: rgb(89, 62, 62);
+        text-shadow: 0 -1px rgba(0,0,0,.45);
+        background: #0dff00;
+        -webkit-animation: pulsate 0.2s linear infinite;
+        animation: pulsate 1.0s linear infinite;
+    }
+</style>
 </body>
+
+<script src="JSFile.js"></script>
 </html>

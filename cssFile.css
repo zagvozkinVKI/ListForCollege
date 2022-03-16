@@ -1,28 +1,112 @@
-ul li {
-    background: #00ff5a;
-    color: #000000;
-}
-ul li:hover {
-    background: #ddd;
-}
-
-.header {
-    background-color: #00ff5a;
-    padding: 40px 30px;
-    color: #000000;
-    text-align: center;
-}
-body {
-    background-color: #000;
-}
+/* Включение отступа и границы в общую ширину и высоту элемента */
 * {
     box-sizing: border-box;
 }
 
+/* Удалите поля и отступы из списка */
 ul {
+    margin: 0;
     padding: 0;
 }
-button2 {
-    background: #e30000;
-    color: #ffc715;
+
+/* Стиль элементов списка */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 20px 10px 45px;
+    background: #252525;
+    color: #c9ffb4;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* сделайте элементы списка невыбираемыми */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+/* Установить все нечетные элементы списка в другой цвет (зебра) */
+ul li:nth-child(odd) {
+    background: #505050;
+    color: #c9ffb4;
+}
+
+/* Более темный фон-цвет при наведении */
+ul li:hover {
+    background: #000000;
+    color: #ffffff;
+
+}
+
+/* При нажатии на кнопку, добавить цвет фона и вычеркнуть текст */
+ul li.checked {
+    background: #383838;
+    color: #ffffff;
+    text-decoration: line-through;
+}
+
+/* Добавить "checked" отметить при нажатии на кнопку */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #45ff00;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Стиль кнопки "Закрыть" */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 20px 12px 16px;
+    color: #45ff00;
+}
+
+
+/* Стиль заголовка */
+.header {
+    background-color: #45ff00;
+    padding: 30px 40px;
+    color: #000000;
+    text-align: center;
+}
+
+/* Очистить поплавки после заголовка */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Стиль ввода */
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Стиль кнопки "Добавить" */
+.SaveButton {
+    padding: 10px;
+    width: 25%;
+    background: #000000;
+    color: #45ff00;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
