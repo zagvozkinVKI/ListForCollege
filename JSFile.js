@@ -1,4 +1,5 @@
-// Создайте кнопку "Закрыть" и добавьте ее к каждому элементу списка
+
+// Создаю кнопку Закрыть (X) и присваиваю для каждого элемента
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -9,7 +10,7 @@ for (i = 0; i < myNodelist.length; i++) {
     myNodelist[i].appendChild(span);
 }
 
-// Нажмите на кнопку "Закрыть", чтобы скрыть текущий элемент списка
+// Кликабельность кнопки Закрыть (X)
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -18,7 +19,7 @@ for (i = 0; i < close.length; i++) {
         div.style.display = "none";
     }
 }
-// Добавить "checked" символ при нажатии на элемент списка
+// Добавить "Галочку" (checked)
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
     if (ev.target.tagName === 'LI') {
@@ -26,7 +27,7 @@ list.addEventListener('click', function(ev) {
     }
 }, false);
 
-// Создайте новый элемент списка при нажатии на кнопку "Добавить"
+// Создание нового элемента, после нажатия на кнопку Save
 function SaveUnit() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;

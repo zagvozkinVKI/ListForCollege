@@ -1,52 +1,63 @@
+
+/* Заголовок */
+.header {
+    background-color: #45ff00;
+    padding: 30px 40px;
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+
+}
+
 /* Включение отступа и границы в общую ширину и высоту элемента */
 * {
     box-sizing: border-box;
 }
 
-/* Удалите поля и отступы из списка */
+/* Удаление лишних полей и отступов */
 ul {
     margin: 0;
     padding: 0;
 }
 
-/* Стиль элементов списка */
+/* Стиль списка */
 ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 20px 10px 45px;
     background: #252525;
     color: #c9ffb4;
-    font-size: 18px;
+    font-size: 25px;
     transition: 0.2s;
 
-    /* сделайте элементы списка невыбираемыми */
+    /* Элементы списка нельзя выбрать */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-/* Установить все нечетные элементы списка в другой цвет (зебра) */
+/* Выбор цветового решения для одних из полос зебры */
 ul li:nth-child(odd) {
     background: #505050;
     color: #c9ffb4;
 }
 
-/* Более темный фон-цвет при наведении */
+/* При наведении */
 ul li:hover {
     background: #000000;
     color: #ffffff;
 
 }
 
-/* При нажатии на кнопку, добавить цвет фона и вычеркнуть текст */
+/* Замена цветов и вычеркивание текста */
 ul li.checked {
     background: #383838;
     color: #ffffff;
     text-decoration: line-through;
 }
 
-/* Добавить "checked" отметить при нажатии на кнопку */
+/* Добавление Галочки (checked) */
 ul li.checked::before {
     content: '';
     position: absolute;
@@ -60,7 +71,7 @@ ul li.checked::before {
     width: 7px;
 }
 
-/* Стиль кнопки "Закрыть" */
+/* Закрыть кнопка стиль */
 .close {
     position: absolute;
     right: 0;
@@ -70,15 +81,7 @@ ul li.checked::before {
 }
 
 
-/* Стиль заголовка */
-.header {
-    background-color: #45ff00;
-    padding: 30px 40px;
-    color: #000000;
-    text-align: center;
-}
-
-/* Очистить поплавки после заголовка */
+/* Грань после заголовка */
 .header:after {
     content: "";
     display: table;
@@ -93,10 +96,10 @@ input {
     width: 75%;
     padding: 10px;
     float: left;
-    font-size: 16px;
+    font-size: 36px;
 }
 
-/* Стиль кнопки "Добавить" */
+/* Добавить кнопка Save стиль */
 .SaveButton {
     padding: 10px;
     width: 25%;
@@ -104,7 +107,7 @@ input {
     color: #45ff00;
     float: left;
     text-align: center;
-    font-size: 16px;
+    font-size: 36px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
