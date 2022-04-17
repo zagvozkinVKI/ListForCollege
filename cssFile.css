@@ -1,5 +1,3 @@
-
-/* Заголовок */
 .header {
     background-color: #45ff00;
     padding: 30px 40px;
@@ -9,18 +7,15 @@
 
 }
 
-/* Включение отступа и границы в общую ширину и высоту элемента */
 * {
     box-sizing: border-box;
 }
 
-/* Удаление лишних полей и отступов */
 ul {
     margin: 0;
     padding: 0;
 }
 
-/* Стиль списка */
 ul li {
     cursor: pointer;
     position: relative;
@@ -37,27 +32,23 @@ ul li {
     user-select: none;
 }
 
-/* Выбор цветового решения для одних из полос зебры */
 ul li:nth-child(odd) {
     background: #505050;
     color: #c9ffb4;
 }
 
-/* При наведении */
 ul li:hover {
     background: #000000;
     color: #ffffff;
 
 }
 
-/* Замена цветов и вычеркивание текста */
 ul li.checked {
     background: #383838;
     color: #ffffff;
     text-decoration: line-through;
 }
 
-/* Добавление Галочки (checked) */
 ul li.checked::before {
     content: '';
     position: absolute;
@@ -71,7 +62,6 @@ ul li.checked::before {
     width: 7px;
 }
 
-/* Закрыть кнопка стиль */
 .close {
     position: absolute;
     right: 0;
@@ -81,14 +71,12 @@ ul li.checked::before {
 }
 
 
-/* Грань после заголовка */
 .header:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Стиль ввода */
 input {
     margin: 0;
     border: none;
@@ -99,7 +87,6 @@ input {
     font-size: 36px;
 }
 
-/* Добавить кнопка Save стиль */
 .SaveButton {
     padding: 10px;
     width: 25%;
